@@ -1,0 +1,28 @@
+{
+  "name": "musicplayer",
+  "version": "1.0.0",
+  "description": "Music Player Desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avayer/musicPlayer.git"
+  },
+  "keywords": [
+    "Music",
+    "Player",
+    "Desktop",
+    "application"
+  ],
+  "author": "avayer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avayer/musicPlayer/issues"
+  },
+  "homepage": "https://github.com/avayer/musicPlayer#readme",
+  "devDependencies": {
+    "electron": "^9.0.2"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body onload="loadData()">
+    <h1>Music Player</h1>
+	<h4 id="songName"></h4>
+	<audio id="player" controls autoplay="">
+	<source src="" type="audio/mpeg">
+	</audio>
+	<p id="msg"></p>
+	<script>
+		var player = document.getElementById("player");
+		songs = ['EmaiPoyave.mp3', 'MutyalaDhaarani.mp3'];
+		var songNo = 0;
+		
+		function loadData() {
+			player.src = songs[songNo];
+			player.autoplay = true;
+			document.getElementById("songName").innerHTML = songs[songName];
+		}
+		var player = document.getElementById("player");
+		
+		player.addEventListener('ended', function() {
+				songNo++;
+				if(songNo == songs.length) {
+					document.getElementById("msg").innerHTML = "Done";
+				}
+				player.src = songs[songNo];
+				player.play();
+				document.getElementById("songName").innerHTML = songs[songName];
+		})
+	</script>
+  </body>
+</html>
